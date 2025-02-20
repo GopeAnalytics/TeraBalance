@@ -42,7 +42,7 @@ function submitOrder(service) {
     orderButton.classList.add("loading");
     orderButton.disabled = true;
 
-    fetch('http://localhost:3000/order', {
+    fetch('https://terabalance-production.up.railway.app//order', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, service })
