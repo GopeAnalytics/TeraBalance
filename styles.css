@@ -1,0 +1,405 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Background Images */
+.homepage {
+    background: url('images/home-background.avif') no-repeat center center/cover;
+}
+
+.services-page {
+    background: url('images/services-background2.jpg') no-repeat center center/cover;
+}
+
+.setup-plan-page {
+    background: url('../images/goat-farming-bg.jpg') no-repeat center center/cover;
+}
+/* Dark overlay for readability */
+body.homepage::before,
+body.services-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1;
+}
+
+/* Header Styles */
+header {
+    background: #008000;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Header Navigation */
+.nav-links {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Center Page Titles */
+header h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+}
+/* Logo */
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* Navigation Links (Top Right Corner) */
+.nav-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Intro Section */
+.intro {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.services-btn {
+    background: #4CAF50;
+}
+
+.services-btn:hover {
+    background: #388E3C;
+    transform: scale(1.05);
+}
+
+.setup-btn {
+    background: #ff9800;
+}
+
+.setup-btn:hover {
+    background: #e68900;
+    transform: scale(1.05);
+}
+
+.quote-btn {
+    background: green;
+}
+
+.quote-btn:hover {
+    background: #005f73;
+    transform: scale(1.05);
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service {
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.service img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #00ff00;
+}
+
+/* Social Media Icons */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Subtle overlay */
+    padding: 20px;
+}
+
+/* Slide Styles */
+.slide {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Images inside slides */
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Text Box Over Slide */
+.text-box {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Fade Animation */
+.fade {
+    animation: fadeEffect 10s infinite;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+/* Order Now Button */
+.order-btn {
+    background: #ff9800;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.order-btn:hover {
+    background: #e68900;
+}
+
+/* Order Form */
+.order-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+.order-form input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+/* Order Button Loading Effect */
+#order-button.loading {
+    background: #ff9800;
+    cursor: not-allowed;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+
+.success-message {
+    color: #4CAF50;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.submit-btn {
+    background: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #388E3C;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+/* Slideshow Wrapper */
+.slideshow-wrapper {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Services Slideshow */
+.services-slideshow {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px;
+    width: 80%;
+}
+
+/* Hide Scrollbar */
+.services-slideshow::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual Service */
+.service {
+    min-width: 300px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Slide Buttons */
+.slide-btn {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.slide-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+/* Auto-Scroll Animation */
+@keyframes autoScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
